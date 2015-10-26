@@ -1,12 +1,130 @@
 <html>
-  <head>
-    <title>Stitch Frontend Test</title>
-  </head>
-  <body>
+<head>
+	<title>Stitch Frontend Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <p style="font-family: proxima-nova; font-size: 20px;">Hello World</p>
+	<link rel="stylesheet" type="text/css" href="assets/responsive-test-font/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+</head>
 
-    <script type="text/javascript" src="https://use.typekit.net/jlf6rqe.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  </body>
+<body>
+	<header>
+
+		<nav class="navbar navbar-default navbar-stitch">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img class="img-responsive" src="assets/images/logo.png"></a>	
+				</div><!-- .navbar-header -->
+
+				<div class="navbar-collapse collapse" id="main-nav">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Feature</a></li>
+						<li><a href="#">Benefits</a></li>
+						<li><a href="#">Integrations</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Login</a></li>
+						<li><a href="#" class="btn btn-blue hidden-mobile">Get Started</a></li>
+					</ul><!-- #nav-mobile -->
+				</div><!-- #main-nav.navbar-collapse -->
+
+			</div><!-- container -->
+		</nav>
+
+	</header>
+
+
+	<div id="main">
+
+		<div class="hero">
+			<div class="hero-image"></div>
+			<div class="container">
+				<div class="row">
+					<div class="hero-copy col-sm-6">
+						<h2>Centralize your Inventory</h2>
+						<p>Getting your inventory organized is one of the best things you can do for your business. As you will see by using Stitch, inventory is at the heart of your business and gaining control of your inventory means you gain control over your business as a&nbsp;whole.</p>
+						<p>Keeping an accurate inventory count means that you can “always be selling.”  Proper management keeps your sales growing from reordering products that are running low to updating listings with current&nbsp;availability.</p>
+						<div class="hero-cta">
+							<a href="#" class="btn btn-orange">Get Started Now</a>
+							<span class="hidden-mobile">or</span>
+							<a href="#" class="btn btn-gray hidden-mobile">Learn More</a>
+						</div>
+					</div><!-- .hero-copy -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .hero -->
+
+		<div class="examples container">
+			<div class="row">
+				<div class="shop example col-sm-4">
+					<div class="icon-wrapper">
+						<span class="icon-shop"></span>
+					</div>
+					<div class="copy">
+						<h4>This is a Store</h4>
+						<p>This is a store that people go shopping at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla ex, congue id elementum vel, scelerisque eget sapien. Pellentesque mattis euismod felis vel&nbsp;pellentesque.</p>
+					</div><!-- .copy -->
+				</div><!-- .shop -->
+				<div class="truck example col-sm-4">
+					<div class="icon-wrapper">
+						<span class="icon-truck"></span>
+					</div>
+					<div class="copy">
+						<h4>Drive a Truck</h4>
+						<p>Drive a truck if you need to transport large quantities of stuff. Duis consectetur eleifend ligula nec ullamcorper. Curabitur ornare mauris eget fermentum luctus. Aenean condimentum elit quis efficitur congue. Vestibulum rhoncus porttitor&nbsp;elementum.</p>
+					</div><!-- .copy -->
+				</div><!-- .truck -->
+				<div class="banknote example col-sm-4">
+					<div class="icon-wrapper">
+						<span class="icon-banknote"></span>
+					</div>
+					<div class="copy">
+						<h4>Make Money</h4>
+						<p>Make money because we all have to. Etiam maximus maximus ipsum, sed tempor velit placerat eu. Ut in porta lacus. Vivamus at mi quis massa posuere tincidunt vel justo id leo aliquet&nbsp;convallis.</p>
+					</div><!-- .copy -->
+				</div><!-- .banknote -->
+			</div><!-- .row -->
+		</div><!-- .examples.container -->
+
+		<div class="signup">
+			<h2>Start your free trial today.</h2>
+			<form>
+				<div class="form-group">
+					<input class="form-control" type="email" name="email" placeholder="email" required>
+					<input class="form-control" type="text" placeholder="company name" name="company">
+					<button type="submit" class="btn btn-teal form-control">Get Started Free</button>
+				</div><!-- .form-group -->
+			</form>
+			<p><small>No credit card. No commitment.</small></p>
+		</div><!-- .signup -->
+
+	</div><!-- #main -->
+
+	<footer>
+
+	</footer>
+
+	<!-- scripts -->	
+	<!-- provided scripts -->
+	<script type="text/javascript" src="https://use.typekit.net/jlf6rqe.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- end provided scripts -->
+
+	<!-- personal scripts -->
+	<script type="text/javascript" src="assets/js/plugins/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<!-- end personal scripts -->
+
+
+	<!-- livereload for dev -->
+	<script src="http://localhost:3001/livereload.js"></script>
+</body>
 </html>

@@ -1,0 +1,121 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @color-hover; @background-hover; @border; @border-hover) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+
+	padding-left: round(@grid-gutter-width);
+	padding-right: round(@grid-gutter-width);
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @color-hover;
+		background-color: @background-hover;
+		border-color: @border-hover;
+
+		&:after {
+			color: @color-hover;
+		}
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: @background;
+					border-color: @border;
+		}
+	}
+
+	// .icon-arrow-r-after;
+
+	// &:after {
+	// 	font-family: "stepUp-icons";
+	// 	font-size: round(@font-size-base / 1.4);
+	// 	color: @color;
+	// 	margin-left: round(@grid-gutter-width / 4);
+	// }
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+	padding: @padding-vertical @padding-horizontal;
+	font-size: @font-size;
+	line-height: @line-height;
+	border-radius: @border-radius;
+}
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 10%);
+				border-color: darken(@border, 12%);
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: @background;
+					border-color: @border;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+	padding: @padding-vertical @padding-horizontal;
+	font-size: @font-size;
+	line-height: @line-height;
+	border-radius: @border-radius;
+}

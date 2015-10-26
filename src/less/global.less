@@ -1,0 +1,276 @@
+html {
+	color: @color-black;
+	font-size: responsive 12px 16px;
+	font-range: @screen-sm-min @screen-md-min;
+}
+
+// Navigation
+//---
+.navbar {
+	margin-bottom: 0;
+	border-bottom: none;
+	background-color: transparent;
+
+	padding-top: 15px;
+	margin-bottom: 15px;
+}
+
+.navbar-collapse {
+	padding: 0;
+}
+
+.navbar .navbar-nav {
+	margin: 0;
+
+	> li {
+		border-top: 1px solid @color-gray;
+
+		> a {
+			text-transform: uppercase;
+			font-size: 1rem;
+			color: #000;
+			font-weight: 600;
+			padding: 15px;
+		}
+	}
+}
+
+.navbar-default .navbar-nav>li>a.btn-blue {
+	.btn-blue;
+	.hidden-sm;
+	.hidden-xs;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	margin-left: 10px;
+	padding: 7px 12px;
+}
+
+.navbar-stitch {
+	.navbar-brand {
+		padding-top: 1rem;
+		padding-left: 15px;
+	}
+
+	.navbar-toggle {
+		border-radius: 4px;
+		border-color: @color-blue;
+		background-color: @color-blue;
+
+		.icon-bar {
+			background-color: @color-white;
+		}
+
+		&:hover, &:focus, &:active {
+			background-color: @color-white;
+
+			.icon-bar {
+				background-color: @color-blue;
+			}
+		}
+
+	}
+}
+
+
+@media(min-width: @screen-sm-min) {
+	.navbar-nav {
+		float: right;
+	}
+
+	.navbar-stitch .navbar-brand {
+		padding-top: 0.5rem;
+	}
+
+	.navbar .navbar-nav>li {
+		border-top: none;
+	}
+	.navbar .navbar-nav>li>a {
+		padding: 16px 0.5rem;
+	}
+}
+
+
+// Hero
+//---
+.hero {
+	background-color: @color-gray;
+	padding-top: 15px;
+	padding-bottom: 55%;
+	text-align: center;
+	position: relative;
+
+	h2 {
+		font-size: 24px;
+	}
+
+	p {
+		color: @color-dark-gray;
+	}
+}
+
+.hero-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background-color: @color-gray;
+
+	background-image: url(../images/mobile-centered-laptop-hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+	// padding-bottom: 50%;
+}
+
+.hero-cta {
+	margin-top: 15px;
+
+	.btn-orange {
+		width: 100%;
+	}
+}
+
+@media(min-width: @screen-sm-min) {
+	.hero {
+		text-align: left;
+		padding-top: 60px;
+		padding-bottom: 125px;
+	}
+
+	.hero-image {
+		background-image: url(../images/full-laptop-hero.jpg);
+		background-position: center center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		content: '';
+	}
+
+	.hero-cta {
+		span {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.btn-orange {
+			width: auto;
+		}
+	}
+}
+
+
+// Examples 
+.examples {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	h4 {
+		text-transform: uppercase;
+	}
+	p {
+		color: @color-dark-gray;
+	}
+
+	[class^="icon-"] {
+		color: @color-blue;
+		font-size: 45px;
+	}
+
+	.example {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+@media(min-width: @screen-sm-min) {
+	.examples {
+		text-align: left;
+
+		.icon-wrapper, .copy {
+			float: left;
+		}
+
+		.icon-wrapper {
+			width: 45px;
+		}
+		.copy {
+			width: ~"calc(100% - 60px)";
+			margin-left: 15px;
+		}
+
+		h4 {
+			margin-top: 0;
+		}
+	}
+}
+
+// Signup
+//---
+.signup {
+	padding: 30px;
+
+	background-color: @color-light-black;
+	color: @color-gray;
+
+	text-align: center;
+
+	h2 {
+		font-size: 24px;
+		font-weight: 100;
+		margin-bottom: 30px;
+	}
+
+	small {
+		color: lighten(@color-light-black, 20%);
+	}
+
+	.form-control {
+		height: 3rem;
+		margin-bottom: 10px;
+	}
+}
+
+@media(min-width: @screen-sm-min) {
+	.signup {
+		.form-control {
+			display: inline-block;
+			width: 25%;
+			max-width: 225px;
+			padding: 8px 1rem;
+			margin-left: 0.25rem;
+			margin-right: 0.25rem;
+			margin-bottom: 0;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+// Hidden Mobile
+.hidden-mobile {
+	.hidden-xs;
+}
+
+// Mixin Variables
+// .btn-name {
+// 	.button-variant(color; background-color; color:hover; background-color:hover; border; border:hover);
+// }
+.btn-blue {
+	.button-variant(@color-white; @color-blue; @color-white; lighten(@color-blue, 10%); transparent; transparent);
+}
+.btn-orange {
+	.button-variant(@color-white; @color-orange; @color-white; lighten(@color-orange, 10%); transparent; transparent);
+}
+.btn-gray {
+	.button-variant(@color-white; @color-dark-gray; @color-white; lighten(@color-dark-gray, 10%); transparent; transparent);
+}
+.btn-teal {
+	.button-variant(@color-white; @color-teal; @color-white; lighten(@color-teal, 10%); transparent; transparent);
+}
